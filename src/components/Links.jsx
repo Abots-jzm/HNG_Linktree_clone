@@ -23,6 +23,7 @@ export default function Links() {
 			<LinkItem title="Design Books" url="https://books.zuri.team/design-rules" id="book__design">
 				This Design Rules Book by HNG gives you all the tips & guidelines you need to create truly professional designs!
 			</LinkItem>
+			<LinkItem title="Contact Me" url="/contact" internal />
 			<Bottom>
 				<div>
 					<img src={SlackSVG} alt="slack" />
