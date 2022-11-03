@@ -1,20 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
 	return (
 		<div>
-			<Container>yo</Container>
+			<Routes>
+				<Route path="/">
+					<Route index element={<Home />} />
+				</Route>
+			</Routes>
 		</div>
 	);
 }
 
 export default App;
-
-const Container = styled.div`
-	padding: 6.4rem 10vw 0;
-
-	@media only screen and (max-width: 768px) {
-		padding: 6.4rem 1.6rem 0;
-	}
-`;
