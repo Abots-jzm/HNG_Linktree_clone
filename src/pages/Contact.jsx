@@ -179,6 +179,10 @@ const Names = styled.div`
 	& > div {
 		flex: 1;
 	}
+
+	@media only screen and (max-width: 600px) {
+		flex-direction: column;
+	}
 `;
 
 const Form = styled.form`
