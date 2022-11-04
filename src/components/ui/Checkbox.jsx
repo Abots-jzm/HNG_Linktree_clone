@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Checkmark from "../icons/Checkmark";
 
-export default function Checkbox({ children, id }) {
+export default function Checkbox({ children, id, onChange }) {
 	return (
 		<Container>
-			<Input type="checkbox" name={id} id={id} />
+			<Input type="checkbox" name={id} id={id} onChange={onChange} />
 			<Label htmlFor={id}>
 				<span>
 					<div className="checkmark">
