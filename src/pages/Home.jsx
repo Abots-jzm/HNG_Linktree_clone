@@ -15,9 +15,9 @@ export default function Home() {
 }
 
 const Container = styled.div`
-	padding: 6.4rem 10vw 0;
+	padding: 6.4rem 10vw 13.6rem;
 
 	@media only screen and (max-width: 768px) {
-		padding: 6.4rem 1.6rem 0;
+		padding: 6.4rem 1.6rem 8.8rem;
 	}
 `;

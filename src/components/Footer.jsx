@@ -22,7 +22,7 @@ export default function Footer() {
 }
 
 const Container = styled.footer`
-	margin: 13.6rem 7.8vw 4.8rem;
+	margin: 0 7.8vw 4.8rem;
 	padding-top: 3.2rem;
 	border-top: 1px solid #eaecf0;
 	display: flex;
@@ -30,7 +30,7 @@ const Container = styled.footer`
 	justify-content: space-between;
 
 	@media only screen and (max-width: 768px) {
-		margin: 8.8rem 1.6rem 3.2rem;
+		margin: 0 1.6rem 3.2rem;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 1.6rem;
