@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function TextArea({ label, children, id, error, isError, enteredValue, onChange }) {
+export default function TextArea({ label, children, id, error, isError, enteredValue, onChange, onBlur }) {
 	return (
 		<div>
 			<Label htmlFor={id}>{label}</Label>
-			<TextAreaStyle name={id} id={id} placeholder={children} value={enteredValue} onChange={onChange} isError={isError} />
+			<TextAreaStyle name={id} id={id} placeholder={children} value={enteredValue} onChange={onChange} onBlur={onBlur} isError={isError} />
 			{isError && <ErrorText>{error}</ErrorText>}
 		</div>
 	);

@@ -53,12 +53,10 @@ export default function Contact() {
 	}
 
 	function emailChangeHanlder(e) {
-		if (!emailIsTouched) setEmailIsTouched(true);
-
 		const value = e.target.value;
 		setEnteredEmail(value);
 
-		if (emailIsTouched)
+		if (emailIsTouched || e.type === "blur")
 			setEmailIsError(
 				!value
 					.toLowerCase()
@@ -125,6 +123,12 @@ export default function Contact() {
 					onChange={emailChangeHanlder}
 					isError={emailIsError}
 					enteredValue={enteredEmail}
+					onBlur={(e) => {
+						if (!emailIsTouched) {
+							setEmailIsTouched(true);
+							emailChangeHanlder(e);
+						}
+					}}
 				>
 					yourname@email.com
 				</Input>

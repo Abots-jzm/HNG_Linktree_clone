@@ -5,7 +5,7 @@ import styled from "styled-components";
 export default function LinkItem({ children, url, id, title, internal }) {
 	if (internal) {
 		return (
-			<InternalAnchor to={url} title={children}>
+			<InternalAnchor id={id} to={url} title={children}>
 				{title}
 			</InternalAnchor>
 		);

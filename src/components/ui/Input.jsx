@@ -2,11 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 
-export default function Input({ label, children, id, type, error, isError, enteredValue, onChange }) {
+export default function Input({ label, children, id, type, error, isError, enteredValue, onChange, onBlur }) {
 	return (
 		<div>
 			<Label htmlFor={id}>{label}</Label>
-			<InputStyle type={type || "text"} name={id} id={id} placeholder={children} onChange={onChange} value={enteredValue} isError={isError} />
+			<InputStyle
+				type={type || "text"}
+				name={id}
+				id={id}
+				placeholder={children}
+				onChange={onChange}
+				value={enteredValue}
+				onBlur={onBlur}
+				isError={isError}
+			/>
 			{isError && <ErrorText>{error}</ErrorText>}
 		</div>
 	);

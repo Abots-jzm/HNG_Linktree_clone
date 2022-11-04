@@ -49,9 +49,6 @@ const Label = styled.label`
 		position: absolute;
 		left: 0;
 		top: -0.1rem;
-		/* display: flex; */
-		/* justify-content: center; */
-		/* align-items: center; */
 
 		.checkmark {
 			position: absolute;
