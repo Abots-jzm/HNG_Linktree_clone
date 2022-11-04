@@ -4,13 +4,17 @@ import Checkbox from "../components/ui/Checkbox";
 import Input from "../components/ui/Input";
 
 export default function Contact() {
+	function handleForm(e) {
+		e.preventDefault();
+	}
+
 	return (
 		<Container>
 			<Heading>
 				<h2>Contact Me</h2>
 				<p>Hi there, contact me to ask me about anything you have in mind.</p>
 			</Heading>
-			<Form>
+			<Form onSubmit={handleForm}>
 				<Names>
 					<Input label="First name" id="first_name">
 						Enter your first name
@@ -26,10 +30,31 @@ export default function Contact() {
 					Send me a message and I'll reply you as soon as possible...
 				</Input>
 				<Checkbox id="agree">You agree to providing your data to abotsjzm who may contact you.</Checkbox>
+				<BtnSubmit id="btn__submit" type="submit">
+					Send message
+				</BtnSubmit>
 			</Form>
 		</Container>
 	);
 }
+
+const BtnSubmit = styled.button`
+	background-color: #1570ef;
+	padding: 1.2rem 2rem;
+	font-weight: 600;
+	color: white;
+	border-radius: 8px;
+	margin-top: 0.8rem;
+
+	&:hover {
+		background-color: #175cd3;
+	}
+
+	&:active,
+	&:focus {
+		box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #d1e9ff;
+	}
+`;
 
 const Names = styled.div`
 	display: flex;
