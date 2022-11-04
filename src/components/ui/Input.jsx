@@ -6,7 +6,7 @@ export default function Input({ label, children, id, type }) {
 		return (
 			<div>
 				<Label htmlFor={id}>{label}</Label>
-				<TextArea name={id} id={id} cols="30" rows="10" placeholder={children} />
+				<TextArea name={id} id={id} placeholder={children} />
 			</div>
 		);
 
@@ -23,10 +23,21 @@ const TextArea = styled.textarea`
 	margin-top: 0.6rem;
 	border-radius: 8px;
 	padding: 1rem 1.4rem;
+	border: 1px solid #d0d5dd;
 	width: 100%;
+	color: #101828;
+	height: 13.2rem;
+	resize: none;
 
 	&::placeholder {
 		color: #667085;
+	}
+
+	&:focus,
+	&:active {
+		border: 1px solid #84caff;
+		outline: none;
+		box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 	}
 `;
 
@@ -43,8 +54,16 @@ const InputStyle = styled.input`
 	padding: 1rem 1.4rem;
 	border: 1px solid #d0d5dd;
 	width: 100%;
+	color: #101828;
 
 	&::placeholder {
 		color: #667085;
+	}
+
+	&:focus,
+	&:active {
+		border: 1px solid #84caff;
+		outline: none;
+		box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 	}
 `;

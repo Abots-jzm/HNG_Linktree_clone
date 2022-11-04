@@ -11,14 +11,18 @@ export default function Contact() {
 			</Heading>
 			<Form>
 				<Names>
-					<Input label="First name">Enter your first name</Input>
-					<Input label="Last name">Enter your last name</Input>
+					<Input label="First name" id="first_name">
+						Enter your first name
+					</Input>
+					<Input label="Last name" id="last_name">
+						Enter your last name
+					</Input>
 				</Names>
-				<Input label="First name" type="email">
+				<Input label="Email" type="email" id="email">
 					yourname@email.com
 				</Input>
-				<Input label="First name" type="text-area">
-					Send me a message and I'll reply you as soon as possible
+				<Input label="Message" type="text-area" id="message">
+					Send me a message and I'll reply you as soon as possible...
 				</Input>
 			</Form>
 		</Container>
@@ -28,6 +32,10 @@ export default function Contact() {
 const Names = styled.div`
 	display: flex;
 	gap: 2.4rem;
+
+	& > div {
+		flex: 1;
+	}
 `;
 
 const Form = styled.form`
