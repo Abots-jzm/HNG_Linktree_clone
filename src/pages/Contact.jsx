@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Input from "../components/ui/Input";
 
 export default function Contact() {
 	return (
@@ -8,13 +9,32 @@ export default function Contact() {
 				<h2>Contact Me</h2>
 				<p>Hi there, contact me to ask me about anything you have in mind.</p>
 			</Heading>
-			<Form>yo</Form>
+			<Form>
+				<Names>
+					<Input label="First name">Enter your first name</Input>
+					<Input label="Last name">Enter your last name</Input>
+				</Names>
+				<Input label="First name" type="email">
+					yourname@email.com
+				</Input>
+				<Input label="First name" type="text-area">
+					Send me a message and I'll reply you as soon as possible
+				</Input>
+			</Form>
 		</Container>
 	);
 }
 
+const Names = styled.div`
+	display: flex;
+	gap: 2.4rem;
+`;
+
 const Form = styled.form`
 	margin-top: 4.8rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
 `;
 
 const Heading = styled.div`
