@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Checkbox from "../components/ui/Checkbox";
 import Input from "../components/ui/Input";
 
 export default function Contact() {
@@ -24,6 +25,7 @@ export default function Contact() {
 				<Input label="Message" type="text-area" id="message">
 					Send me a message and I'll reply you as soon as possible...
 				</Input>
+				<Checkbox id="agree">You agree to providing your data to abotsjzm who may contact you.</Checkbox>
 			</Form>
 		</Container>
 	);
